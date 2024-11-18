@@ -22,6 +22,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+
+    # secrets 내용을 읽어 yml 파일을 특정 위치에 생성
+    - name: make application.yml
+      run: |
+        mkdir -p ./src/main/resources
+        cd ./src/main/resources
+        touch ./application.yml
+        echo "${{ secrets.APPLICATION }}" > ./application.yml
+
     - name: Grant execute permission for Gradle Wrapper
       run: chmod +x gradlew
 
