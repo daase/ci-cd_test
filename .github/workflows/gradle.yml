@@ -88,5 +88,5 @@ jobs:
         --application-name cd-test \
         --deployment-group-name test-group \
         --file-exists-behavior OVERWRITE \
-        --s3-location bucket=my-test-bucket-mtb1,bundleType=zip,key=back_end_test.zip \ 
+        --s3-location bucket=my-test-bucket-mtb1,bundleType=zip,key=back_end_test.zip \
         --region ap-northeast-2
